@@ -5,6 +5,64 @@
   /* text-align: center; */
 }
 
-.card {
-  padding: 2em;
+.container {
+  display: grid;
+  column-gap: 5px;
+  grid-template-columns: 50% 50%;
+  height: 100vh;
+  margin: 20px;
+  padding: 10px;
 }
+
+.part-a, .part-b{
+  padding: 5px 5px 30px 20px;
+}
+
+.cv-detail, .cv-view {
+  height: 100vh;
+  margin:5px 0px 5px 0px;
+}
+
+.cv-view{
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.cv-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cv-detail .input-section {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(4, 2, 2, 0.1);
+  padding: 10px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+.inline-inputs{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+}
+
+.form-container input,textarea {
+  display: block;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+textarea{
+  max-width: 95%;
+}
+
