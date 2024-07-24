@@ -32,9 +32,9 @@
  }
 
  .cv-input-container-content hr {
-  width: 75%;
-  align-items: right;
-}
+   width: 75%;
+   align-items: right;
+ }
 
  .cv-input-form-list {
    display: flex;
@@ -74,7 +74,8 @@
    margin-bottom: 5px;
  }
 
- .actual-form input, textarea {
+ .actual-form input,
+ textarea {
    margin-bottom: 8px;
    padding: 5px;
    font-size: 14px;
@@ -120,4 +121,10 @@
  textarea {
    max-width: 100%;
    resize: vertical;
+ }
+
+ .footer {
+   margin: 10px;
+   margin-left: 30px;
+   padding: 5px;
  }

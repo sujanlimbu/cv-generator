@@ -5,10 +5,11 @@ import Education from './components/Education'
 import Experience from './components/Experience'
 import CVRenderer from './components/CVRenderer'
 import NewSection from './components/NewSection'
+import Footer from './components/Footer'
 
 function App() {
   const [basicInfo, setBasicInfo] = useState({
-    name: '',
+    name: 'Your name',
     email: '',
     phone: '',
     address: '',
@@ -50,6 +51,7 @@ function App() {
           <CVRenderer basicInfo={basicInfo} educations={educations} experiences={experiences} newSections={newSections}/>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
