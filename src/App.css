@@ -1,8 +1,123 @@
  .container {
    display: grid;
-   column-gap: 5px;
-   grid-template-columns: 50% 50%;
+   column-gap: 10px;
+   grid-template-columns: 2fr 3fr;
    height: 100vh;
    margin: 20px;
    padding: 10px;
+ }
+
+ .cv-input-container {
+   display: flex;
+   flex-direction: column;
+   overflow-y: auto;
+   gap: 10px;
+   max-height: auto;
+ }
+
+ .cv-input-container-content,
+ .cv-display-container {
+   background-color: #f8f8f8;
+   border-radius: 5px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   padding: 15px;
+   border: 1px solid #ddd;
+   transition: transform 0.2s ease-in-out;
+ }
+
+ .cv-input-container-content h3 {
+   margin-top: 5px;
+   margin-bottom: 5px;
+   padding-left: 10px;
+ }
+
+ .cv-input-container-content hr {
+  width: 75%;
+  align-items: right;
+}
+
+ .cv-input-form-list {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   max-height: auto;
+ }
+
+ .actual-form {
+   padding: 10px;
+   position: relative;
+   border-bottom: 1px solid black;
+ }
+
+ #basic-info-form {
+   border: none;
+ }
+
+ .actual-form div {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .actual-form .grid-div {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 10px;
+ }
+
+ .actual-form .inline-div {
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+ }
+
+ .actual-form label {
+   margin-bottom: 5px;
+ }
+
+ .actual-form input, textarea {
+   margin-bottom: 8px;
+   padding: 5px;
+   font-size: 14px;
+ }
+
+ .close-button {
+   position: absolute;
+   color: #aaa;
+   top: 0;
+   right: 0;
+   font-size: 25px;
+   font-weight: normal;
+   cursor: pointer;
+   background: none;
+   border: none;
+   transform: rotate(45deg);
+   transition: transform 0.2s ease-in-out;
+ }
+
+ .close-button:hover {
+   transform: rotate(135deg);
+   color: rgb(239, 0, 0);
+   text-decoration: none;
+ }
+
+ .add-button {
+   cursor: pointer;
+   background-color: #3378e8;
+   color: white;
+   font-size: 18px;
+   border: none;
+   border-radius: 5px;
+   margin: 10px;
+   margin-bottom: 0px;
+   padding: 10px;
+ }
+
+ .add-button:hover {
+   transform: translateY(1px);
+   background-color: #055df3;
+ }
+
+ textarea {
+   max-width: 100%;
+   resize: vertical;
  }

@@ -40,13 +40,13 @@ function App() {
   return (
     <>
       <div className="container">
-        <div className="form-container">
+        <div className="cv-input-container">
           <BasicInformation basicInfo={basicInfo} setBasicInfo={setBasicInfo} />
           <Education educations={educations} setEducations={setEducations} />
           <Experience experiences={experiences} setExperiencs={setExperiencs} />
           <NewSection newSections={newSections} setNewSections={setNewSections}/>
         </div>
-        <div className="cv-container">
+        <div className="cv-display-container">
           <CVRenderer basicInfo={basicInfo} educations={educations} experiences={experiences} newSections={newSections}/>
         </div>
       </div>

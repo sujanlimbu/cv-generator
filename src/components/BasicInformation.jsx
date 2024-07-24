@@ -8,20 +8,22 @@ function BasicInformation({ basicInfo, setBasicInfo }) {
 
     return (
         <>
-            <div>
+            <div className="cv-input-container-content">
                 <h3>Basic Information</h3>
-                <form>
+                <form className="actual-form" id="basic-info-form">
                     <div>
                         <label htmlFor="name"><span>Fullname</span></label>
                         <input type="text" name="name" id="name" value={basicInfo.name} onChange={handleInputChange} />
                     </div>
-                    <div>
-                        <label htmlFor="email"><span>Email</span></label>
-                        <input type="email" name="email" id="email" value={basicInfo.email} onChange={handleInputChange} />
-                    </div>
-                    <div>
-                        <label htmlFor="phone"><span>Phone Number</span></label>
-                        <input type="phone" name="phone" id="phone" value={basicInfo.phone} onChange={handleInputChange} />
+                    <div className="grid-div">
+                        <div>
+                            <label htmlFor="email"><span>Email</span></label>
+                            <input type="email" name="email" id="email" value={basicInfo.email} onChange={handleInputChange} />
+                        </div>
+                        <div>
+                            <label htmlFor="phone"><span>Phone Number</span></label>
+                            <input type="phone" name="phone" id="phone" value={basicInfo.phone} onChange={handleInputChange} />
+                        </div>
                     </div>
                     <div>
                         <label htmlFor="address"><span>Address</span></label>
@@ -32,7 +34,7 @@ function BasicInformation({ basicInfo, setBasicInfo }) {
                         <textarea
                             name="aboutyourself"
                             id="aboutyourself"
-                            rows="6" cols="50"
+                            rows="6"
                             value={basicInfo.aboutyourself}
                             onChange={handleInputChange}
                         />
