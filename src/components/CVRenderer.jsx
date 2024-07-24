@@ -1,13 +1,13 @@
-function CVRenderer({ basicInfo, educations, experiences }) {
+function CVRenderer({ basicInfo, educations, experiences, newSections }) {
     return (
         <>
             <div>
-                <h2>{basicInfo.name}</h2>
-                <h3>{basicInfo.email}</h3>
-                <h3>{basicInfo.phone}</h3>
+                <h1>{basicInfo.name}</h1>
+                <p>{basicInfo.email}</p>
+                <p>{basicInfo.phone}</p>
+                <p>{basicInfo.address}</p>
             </div>
             <hr />
-
             <div>
                 <h4>Summary</h4>
                 <p>{basicInfo.aboutyourself}</p>
@@ -33,6 +33,13 @@ function CVRenderer({ basicInfo, educations, experiences }) {
                     </div>
                 ))}
             </div>
+            {newSections.map(section => (
+                <div key={section.id}>
+                    <h4>{section.heading}</h4>
+                    <p>{section.description}</p>
+                </div>
+            ))}
+
         </>
     );
 }
