@@ -10,12 +10,14 @@ function App() {
     name: '',
     email: '',
     phone: '',
+    address: '',
     aboutyourself: ''
   });
 
   const [educations, setEducations] = useState([{
     id: Date.now(),
     institute: '',
+    location: '',
     title: '',
     startYear: '',
     gradYear: ''
@@ -24,9 +26,11 @@ function App() {
   const [experiences, setExperiencs] = useState([{
     id: Date.now(),
     company: '',
+    location: '',
     position: '',
     startDate: '',
     endDate: '',
+    isStillWorking: false,
     responsibilities: ''
 }]);
 
@@ -37,12 +41,11 @@ function App() {
           <BasicInformation basicInfo={basicInfo} setBasicInfo={setBasicInfo}/>
           <Education educations={educations} setEducations={setEducations} />
           <Experience experiences={experiences} setExperiencs={setExperiencs}/>
-          
+
         </div>
         <div className="cv-container">
           <CVRenderer basicInfo={basicInfo} educations={educations} experiences={experiences}/>
         </div>
-
       </div>
     </>
   )

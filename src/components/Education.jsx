@@ -1,4 +1,4 @@
-function Education({educations, setEducations}) {
+function Education({ educations, setEducations }) {
     const handleInputChange = (id, event) => {
         const { name, value } = event.target;
         setEducations(educations.map(edu => (edu.id === id ? { ...edu, [name]: value } : edu)));
@@ -31,6 +31,16 @@ function Education({educations, setEducations}) {
                             name="institute"
                             id={`institute-${edu.id}`}
                             value={edu.institute}
+                            onChange={(event) => handleInputChange(edu.id, event)}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor={`location-${edu.id}`}><span>Location</span></label>
+                        <input
+                            type="text"
+                            name="location"
+                            id={`location-${edu.id}`}
+                            value={edu.location}
                             onChange={(event) => handleInputChange(edu.id, event)}
                         />
                     </div>

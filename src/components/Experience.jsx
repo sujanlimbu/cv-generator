@@ -1,9 +1,13 @@
 import { useState } from "react";
 
-function Experience({experiences, setExperiencs}) {
+function Experience({ experiences, setExperiencs }) {
     const handleInputChange = (event, id) => {
-        const { name, value } = event.target;
-        setExperiencs(experiences.map(exp => exp.id === id ? { ...exp, [name]: value } : exp));
+        const { name, value, type, checked } = event.target;
+        setExperiencs(experiences.map(exp =>
+            exp.id === id ? {
+                ...exp,
+                [name]: (type === 'checkbox' ? checked : value)
+            } : exp));
     };
 
     const handleAddExp = () => {
@@ -38,11 +42,23 @@ function Experience({experiences, setExperiencs}) {
                         />
                     </div>
                     <div>
+                        <label htmlFor={`location-${exp.id}`}><span>Location</span></label>
+                        <input
+                            type="text"
+                            name="location"
+                            id={`location-${exp.id}`}
+                            value={exp.location}
+                            onChange={(event) => handleInputChange(exp.id, event)}
+                        />
+                    </div>
+                    <div>
                         <label htmlFor="position"><span>Position Title</span></label>
                         <input
                             type="text"
                             name="position"
                             id="position"
+                            value={exp.position}
+                            onChange={(event) => handleInputChange(exp.id, event)}
                         />
                     </div>
                     <div >
@@ -62,6 +78,17 @@ function Experience({experiences, setExperiencs}) {
                             name="endDate"
                             id={`end-date-${exp.id}`}
                             value={exp.endDate}
+                            onChange={(event) => handleInputChange(event, exp.id)}
+                            disabled={exp.isStillWorking}
+                        />
+                    </div>
+                    <div >
+                        <label htmlFor={`isStillWorking-${exp.id}`}><span>Still working? </span></label>
+                        <input
+                            type="checkbox"
+                            name="isStillWorking"
+                            id={`isStillWorking-${exp.id}`}
+                            checked={exp.isStillWorking}
                             onChange={(event) => handleInputChange(event, exp.id)}
                         />
                     </div>
