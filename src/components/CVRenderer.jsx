@@ -21,7 +21,7 @@ function CVRenderer({ basicInfo, educations, experiences, newSections }) {
                         <div key={edu.id}>
                             <p>{edu.institute}{edu.location? `, ${edu.location}`: ``}</p>
                             <h4>{edu.title}</h4>
-                            <p>{`${edu.startYear} ${edu.gradYear}`}</p>
+                            <p>{`${edu.startYear}-${edu.gradYear}`}</p>
                             <br />
                         </div>
                     ))}
