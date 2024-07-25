@@ -53,13 +53,13 @@ function Experience({ experiences, setExperiencs }) {
                                 />
                             </div>
                             <div>
-                                <label htmlFor={`title-${exp.id}`}><span>Position Title</span></label>
+                                <label htmlFor={`position-${exp.id}`}><span>Position Title</span></label>
                                 <input
                                     type="text"
-                                    name="title"
-                                    id={`title-${exp.id}`}
-                                    value={exp.title}
-                                    onChange={(event) => handleInputChange(exp.id, event)}
+                                    name="position"
+                                    id={`position-${exp.id}`}
+                                    value={exp.position}
+                                    onChange={(event) => handleInputChange(event, exp.id)}
                                 />
                             </div>
                             <div className="grid-div">

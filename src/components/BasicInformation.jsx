@@ -12,7 +12,7 @@ function BasicInformation({ basicInfo, setBasicInfo }) {
                 <h3>Basic Information</h3>
                 <form className="actual-form" id="basic-info-form">
                     <div>
-                        <label htmlFor="name"><span>Fullname</span></label>
+                        <label htmlFor="name"><span>Full Name</span></label>
                         <input type="text" name="name" id="name" value={basicInfo.name} onChange={handleInputChange} />
                     </div>
                     <div className="grid-div">

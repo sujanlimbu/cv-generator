@@ -37,7 +37,7 @@ function NewSection({ newSections, setNewSections }) {
                                     id={`heading-${section.id}`}
                                     value={section.heading}
                                     onChange={(event => handleInputChange(event, section.id))}
-                                    placeholder="Skills"
+                                    placeholder="Eg. skills, hobby, language, certificates"
                                 />
                             </div>
                             <div>
